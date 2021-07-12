@@ -1,0 +1,899 @@
+2021-07-12T14:47:45,479062500+00:00 - gunicorn/run 
+2021-07-12T14:47:45,483383500+00:00 - rsyslog/run 
+2021-07-12T14:47:45,505629600+00:00 - nginx/run 
+2021-07-12T14:47:45,508550300+00:00 - iot-server/run 
+/usr/sbin/nginx: /azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/libcrypto.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/libcrypto.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/libssl.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/libssl.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/libssl.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+rsyslogd: /azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/libuuid.so.1: no version information available (required by rsyslogd)
+EdgeHubConnectionString and IOTEDGE_IOTHUBHOSTNAME are not set. Exiting...
+2021-07-12T14:47:45,741338000+00:00 - iot-server/finish 1 0
+2021-07-12T14:47:45,743510500+00:00 - Exit code 1 is normal. Not restarting iot-server.
+Starting gunicorn 20.1.0
+Listening at: http://127.0.0.1:31311 (63)
+Using worker: sync
+worker timeout is set to 300
+Booting worker with pid: 90
+SPARK_HOME not set. Skipping PySpark Initialization.
+Generating new fontManager, this may take some time...
+Initializing logger
+2021-07-12 14:47:47,302 | root | INFO | Starting up app insights client
+2021-07-12 14:47:47,303 | root | INFO | Starting up request id generator
+2021-07-12 14:47:47,304 | root | INFO | Starting up app insight hooks
+2021-07-12 14:47:47,304 | root | INFO | Invoking user's init function
+2021-07-12 14:47:50,163 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 14:47:50,715 | root | INFO | Users's init has completed successfully
+2021-07-12 14:47:50,728 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 14:47:50,729 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 14:47:50,731 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 14:48:16,338 | root | INFO | 200
+127.0.0.1 - - [12/Jul/2021:14:48:16 +0000] "GET /swagger.json HTTP/1.0" 200 3501 "-" "Go-http-client/1.1"
+2021-07-12 14:49:31,772 | root | INFO | 200
+127.0.0.1 - - [12/Jul/2021:14:49:31 +0000] "GET /swagger.json HTTP/1.0" 200 3501 "-" "Go-http-client/1.1"
+2021-07-12 14:49:34,451 | root | INFO | 200
+127.0.0.1 - - [12/Jul/2021:14:49:34 +0000] "GET /swagger.json HTTP/1.0" 200 3501 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+2021-07-12 14:49:59,060 | root | INFO | 200
+127.0.0.1 - - [12/Jul/2021:14:49:59 +0000] "GET /swagger.json HTTP/1.0" 200 3501 "-" "Go-http-client/1.1"
+2021-07-12 14:58:40,087 | root | INFO | 200
+127.0.0.1 - - [12/Jul/2021:14:58:40 +0000] "GET /swagger.json HTTP/1.0" 200 3501 "-" "Go-http-client/1.1"
+2021-07-12 14:58:41,553 | root | INFO | 200
+127.0.0.1 - - [12/Jul/2021:14:58:41 +0000] "GET /swagger.json HTTP/1.0" 200 3501 "-" "Go-http-client/1.1"
+2021-07-12 15:00:23,204 | root | INFO | Validation Request Content-Type
+2021-07-12 15:00:23,205 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:00:23,246 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:00:23,247 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:00:23 +0000] "POST /score HTTP/1.0" 500 45 "-" "python-requests/2.24.0"
+2021-07-12 15:00:57,018 | root | INFO | Validation Request Content-Type
+2021-07-12 15:00:57,018 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:00:57,040 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:00:57,047 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:00:57 +0000] "POST /score HTTP/1.0" 500 45 "-" "python-requests/2.24.0"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 90)
+worker timeout is set to 300
+Booting worker with pid: 370
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 15:01:58,244 | root | INFO | Starting up app insights client
+2021-07-12 15:01:58,247 | root | INFO | Starting up request id generator
+2021-07-12 15:01:58,247 | root | INFO | Starting up app insight hooks
+2021-07-12 15:01:58,247 | root | INFO | Invoking user's init function
+2021-07-12 15:02:00,714 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 15:02:01,196 | root | INFO | Users's init has completed successfully
+2021-07-12 15:02:01,214 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 15:02:01,214 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 15:02:01,219 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 15:02:56,647 | root | INFO | Validation Request Content-Type
+2021-07-12 15:02:56,648 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:02:56,699 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:02:56,700 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:02:56 +0000] "POST /score HTTP/1.0" 500 45 "-" "python-requests/2.24.0"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 370)
+worker timeout is set to 300
+Booting worker with pid: 417
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 15:03:57,975 | root | INFO | Starting up app insights client
+2021-07-12 15:03:57,977 | root | INFO | Starting up request id generator
+2021-07-12 15:03:57,977 | root | INFO | Starting up app insight hooks
+2021-07-12 15:03:57,977 | root | INFO | Invoking user's init function
+2021-07-12 15:04:00,745 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 15:04:01,372 | root | INFO | Users's init has completed successfully
+2021-07-12 15:04:01,397 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 15:04:01,397 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 15:04:01,399 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 15:46:22,503 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:46:22,510 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 55, in decorator_input
+    args[param_position] = _deserialize_input_argument(args[param_position], param_type, param_name)
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 20, in get_prediction_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:46:22,510 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:46:22 +0000] "GET /score HTTP/1.0" 500 23 "-" "curl/7.64.1"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 417)
+worker timeout is set to 300
+Booting worker with pid: 1251
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 15:47:23,783 | root | INFO | Starting up app insights client
+2021-07-12 15:47:23,786 | root | INFO | Starting up request id generator
+2021-07-12 15:47:23,786 | root | INFO | Starting up app insight hooks
+2021-07-12 15:47:23,787 | root | INFO | Invoking user's init function
+2021-07-12 15:47:26,275 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 15:47:26,771 | root | INFO | Users's init has completed successfully
+2021-07-12 15:47:26,773 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 15:47:26,774 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 15:47:26,777 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 15:49:57,715 | root | INFO | Validation Request Content-Type
+2021-07-12 15:49:57,716 | root | INFO | 415
+127.0.0.1 - - [12/Jul/2021:15:49:57 +0000] "POST /score HTTP/1.0" 415 58 "-" "curl/7.64.1"
+2021-07-12 15:50:27,555 | root | INFO | Validation Request Content-Type
+2021-07-12 15:50:27,556 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:50:27,595 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:50:27,596 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:50:27 +0000] "POST /score HTTP/1.0" 500 45 "-" "curl/7.64.1"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 1251)
+worker timeout is set to 300
+Booting worker with pid: 1337
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 15:51:28,798 | root | INFO | Starting up app insights client
+2021-07-12 15:51:28,801 | root | INFO | Starting up request id generator
+2021-07-12 15:51:28,801 | root | INFO | Starting up app insight hooks
+2021-07-12 15:51:28,801 | root | INFO | Invoking user's init function
+2021-07-12 15:51:31,284 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 15:51:31,792 | root | INFO | Users's init has completed successfully
+2021-07-12 15:51:31,794 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 15:51:31,794 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 15:51:31,796 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 15:53:03,013 | root | INFO | Validation Request Content-Type
+2021-07-12 15:53:03,015 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:53:03,055 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:53:03,055 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:53:03 +0000] "POST /score HTTP/1.0" 500 45 "-" "curl/7.64.1"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 1337)
+worker timeout is set to 300
+Booting worker with pid: 1394
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 15:54:04,228 | root | INFO | Starting up app insights client
+2021-07-12 15:54:04,231 | root | INFO | Starting up request id generator
+2021-07-12 15:54:04,231 | root | INFO | Starting up app insight hooks
+2021-07-12 15:54:04,231 | root | INFO | Invoking user's init function
+2021-07-12 15:54:06,602 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 15:54:07,080 | root | INFO | Users's init has completed successfully
+2021-07-12 15:54:07,083 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 15:54:07,083 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 15:54:07,086 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 15:54:48,967 | root | INFO | Validation Request Content-Type
+2021-07-12 15:54:48,968 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:54:49,007 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:54:49,008 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:54:49 +0000] "POST /score HTTP/1.0" 500 45 "-" "python-requests/2.25.1"
+2021-07-12 15:55:39,651 | root | INFO | Validation Request Content-Type
+2021-07-12 15:55:39,652 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:55:39,681 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:55:39,682 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:55:39 +0000] "POST /score HTTP/1.0" 500 45 "-" "python-requests/2.25.1"
+2021-07-12 15:56:00,725 | root | INFO | Validation Request Content-Type
+2021-07-12 15:56:00,726 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:56:00,749 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'yes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:56:00,755 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:56:00 +0000] "POST /score HTTP/1.0" 500 45 "-" "curl/7.64.1"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 1394)
+worker timeout is set to 300
+Booting worker with pid: 1466
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 15:57:02,039 | root | INFO | Starting up app insights client
+2021-07-12 15:57:02,041 | root | INFO | Starting up request id generator
+2021-07-12 15:57:02,041 | root | INFO | Starting up app insight hooks
+2021-07-12 15:57:02,042 | root | INFO | Invoking user's init function
+2021-07-12 15:57:04,466 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 15:57:05,007 | root | INFO | Users's init has completed successfully
+2021-07-12 15:57:05,010 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 15:57:05,010 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 15:57:05,012 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 15:57:11,001 | root | INFO | Validation Request Content-Type
+2021-07-12 15:57:11,001 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:57:11,011 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 55, in decorator_input
+    args[param_position] = _deserialize_input_argument(args[param_position], param_type, param_name)
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:57:11,012 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:57:11 +0000] "POST /score HTTP/1.0" 500 23 "-" "curl/7.64.1"
+2021-07-12 15:57:43,823 | root | INFO | Validation Request Content-Type
+2021-07-12 15:57:43,823 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:57:43,836 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 71, in deserialize_input
+    data_frame.columns = self.sample_input.columns.copy()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5192, in __setattr__
+    return object.__setattr__(self, name, value)
+  File "pandas/_libs/properties.pyx", line 67, in pandas._libs.properties.AxisProperty.__set__
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 690, in _set_axis
+    self._data.set_axis(axis, labels)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 183, in set_axis
+    "values have {new} elements".format(old=old_len, new=new_len)
+ValueError: Length mismatch: Expected axis has 0 elements, new values have 20 elements
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:57:43,836 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:57:43 +0000] "POST /score HTTP/1.0" 500 74 "-" "curl/7.64.1"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 1466)
+worker timeout is set to 300
+Booting worker with pid: 1508
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 15:58:45,144 | root | INFO | Starting up app insights client
+2021-07-12 15:58:45,148 | root | INFO | Starting up request id generator
+2021-07-12 15:58:45,148 | root | INFO | Starting up app insight hooks
+2021-07-12 15:58:45,149 | root | INFO | Invoking user's init function
+2021-07-12 15:58:47,678 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 15:58:48,187 | root | INFO | Users's init has completed successfully
+2021-07-12 15:58:48,190 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 15:58:48,191 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 15:58:48,193 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 15:59:18,011 | root | INFO | Validation Request Content-Type
+2021-07-12 15:59:18,011 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 15:59:18,056 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 707, in astype_nansafe
+    return lib.astype_intsafe(arr.ravel(), dtype).reshape(arr.shape)
+  File "pandas/_libs/lib.pyx", line 547, in pandas._libs.lib.astype_intsafe
+ValueError: invalid literal for int() with base 10: 'blue-collar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 15:59:18,057 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:15:59:18 +0000] "POST /score HTTP/1.0" 500 53 "-" "curl/7.64.1"
+Exception in worker process
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in init_process
+    self.run()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 125, in run
+    self.run_for_one(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 84, in run_for_one
+    self.wait(timeout)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/gunicorn/workers/sync.py", line 36, in wait
+    ret = select.select(self.wait_fds, [], [], timeout)
+  File "/var/azureml-server/routes_common.py", line 162, in alarm_handler
+    raise TimeoutException(error_message)
+timeout_exception.TimeoutException
+Worker exiting (pid: 1508)
+worker timeout is set to 300
+Booting worker with pid: 1556
+SPARK_HOME not set. Skipping PySpark Initialization.
+Initializing logger
+2021-07-12 16:00:19,239 | root | INFO | Starting up app insights client
+2021-07-12 16:00:19,241 | root | INFO | Starting up request id generator
+2021-07-12 16:00:19,241 | root | INFO | Starting up app insight hooks
+2021-07-12 16:00:19,241 | root | INFO | Invoking user's init function
+2021-07-12 16:00:21,608 | azureml.core | WARNING | Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+Failure while loading azureml_run_type_providers. Failed to load entrypoint automl = azureml.train.automl.run:AutoMLRun._from_run_dto with exception cannot import name 'RunType'.
+2021-07-12 16:00:22,100 | root | INFO | Users's init has completed successfully
+2021-07-12 16:00:22,102 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+2021-07-12 16:00:22,103 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-07-12 16:00:22,107 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+2021-07-12 16:06:39,614 | root | INFO | Validation Request Content-Type
+2021-07-12 16:06:39,616 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 16:06:39,663 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 729, in astype_nansafe
+    return arr.astype(dtype, copy=True)
+ValueError: could not convert string to float: 'may'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 16:06:39,664 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:16:06:39 +0000] "POST /score HTTP/1.0" 500 40 "-" "curl/7.64.1"
+2021-07-12 16:07:05,719 | root | INFO | Validation Request Content-Type
+2021-07-12 16:07:05,720 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 16:07:05,750 | root | ERROR | Encountered Exception: Traceback (most recent call last):
+  File "/var/azureml-server/synchronous/routes.py", line 64, in run_scoring
+    response = invoke_user_with_timer(service_input, request_headers)
+  File "/var/azureml-server/synchronous/routes.py", line 97, in invoke_user_with_timer
+    result = user_main.run(**params)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/wrapt/wrappers.py", line 567, in __call__
+    args, kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 57, in decorator_input
+    kwargs[param_name] = _deserialize_input_argument(kwargs[param_name], param_type, param_name)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/schema_decorators.py", line 285, in _deserialize_input_argument
+    input_data = param_type.deserialize_input(input_data)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/inference_schema/parameter_types/pandas_parameter_type.py", line 79, in deserialize_input
+    data_frame = data_frame.astype(dtype=converted_types)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5865, in astype
+    dtype=dtype[col_name], copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/generic.py", line 5882, in astype
+    dtype=dtype, copy=copy, errors=errors, **kwargs
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 581, in astype
+    return self.apply("astype", dtype=dtype, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 438, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 559, in astype
+    return self._astype(dtype, copy=copy, errors=errors, values=values, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 643, in _astype
+    values = astype_nansafe(vals1d, dtype, copy=True, **kwargs)
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/pandas/core/dtypes/cast.py", line 729, in astype_nansafe
+    return arr.astype(dtype, copy=True)
+ValueError: could not convert string to float: 'failure'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/azureml-envs/azureml_429e58b1641c78c2352efc8ad21c49d9/lib/python3.6/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/azureml-server/synchronous/routes.py", line 43, in score_realtime
+    return run_scoring(service_input, request.headers, request.environ.get('REQUEST_ID', '00000000-0000-0000-0000-000000000000'))
+  File "/var/azureml-server/synchronous/routes.py", line 77, in run_scoring
+    raise RunFunctionException(str(exc))
+run_function_exception.RunFunctionException
+
+2021-07-12 16:07:05,750 | root | INFO | 500
+127.0.0.1 - - [12/Jul/2021:16:07:05 +0000] "POST /score HTTP/1.0" 500 44 "-" "curl/7.64.1"
+2021-07-12 16:07:22,079 | root | INFO | Validation Request Content-Type
+2021-07-12 16:07:22,080 | root | INFO | Scoring Timer is set to 60.0 seconds
+2021-07-12 16:07:22,182 | root | INFO | 200
+127.0.0.1 - - [12/Jul/2021:16:07:22 +0000] "POST /score HTTP/1.0" 200 24 "-" "curl/7.64.1"
